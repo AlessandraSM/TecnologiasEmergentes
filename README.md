@@ -1,7 +1,6 @@
  ![Cerâmica Decorativa](minha-loja-ceramica/assets/ceramica.png)
 
- Loja de Produtos de Cerâmica
-Este é um projeto desenvolvido para a disciplina de Tecnologias Emergentes. A aplicação consiste em um sistema web para gerenciamento de produtos de uma loja de cerâmica, com funcionalidades completas de CRUD (Create, Read, Update, Delete), utilizando Python, Flask e SQLAlchemy.
+Este projeto consiste em um sistema web para gerenciamento de produtos de uma loja de cerâmica, com funcionalidades completas de CRUD (Create, Read, Update, Delete), utilizando Python, Flask e SQLAlchemy.
 
 🎯 Objetivo
 O objetivo principal desta aplicação é permitir o cadastro, visualização, atualização e exclusão de produtos artesanais de cerâmica, demonstrando a aplicação prática dos conhecimentos adquiridos ao longo da disciplina.
