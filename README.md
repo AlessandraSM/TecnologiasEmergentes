@@ -33,30 +33,38 @@ Funcionalidades
 
 ✅ Armazenamento persistente dos dados com SQLite
 
-Como Executar o Projeto
-Clone o repositório:
+<h2>🚀 Como Executar o Projeto</h2>
 
-bash
-git clone https://github.com/seu-usuario/ceramica-loja.git
+<p>Siga os passos abaixo para executar o projeto localmente:</p>
+
+<h3>1. Clone o repositório</h3>
+<pre><code>git clone https://github.com/seu-usuario/ceramica-loja.git
 cd ceramica-loja
-Crie e ative um ambiente virtual:
+</code></pre>
 
-bash
-python -m venv venv
-source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate     # Windows
+<h3>2. Crie e ative o ambiente virtual</h3>
 
-Instale as dependências:
+<h4>🔹 Para Linux/macOS:</h4>
+<pre><code>python -m venv venv
+source venv/bin/activate
+</code></pre>
 
-bash
-pip install -r requirements.txt
-Inicie a aplicação:
+<h4>🔹 Para Windows:</h4>
+<pre><code>python -m venv venv
+venv\Scripts\activate
+</code></pre>
 
-bash
-python run.py
-Acesse no navegador:
+<h3>3. Instale as dependências</h3>
+<pre><code>pip install -r requirements.txt
+</code></pre>
 
-http://localhost:5000
+<h3>4. Inicie a aplicação</h3>
+<pre><code>python run.py
+</code></pre>
+
+<h3>5. Acesse no navegador</h3>
+<p><a href="http://localhost:5000">http://localhost:5000</a></p>
+
 
 ## Ferramentas para Desenvolvimento
 
