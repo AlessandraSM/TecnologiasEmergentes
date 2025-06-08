@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}Cadastrar Produto{% endblock %}
+
+{% block content %}
+<!-- Link de voltar, maior e à esquerda da tela -->
+<div class="container-fluid px-4 mt-3">
+  <a href="{{ url_for('produtos.listar') }}"
+     class="btn btn-link text-decoration-none fw-semibold"
+     style="color: #7C9473; font-size: 1.1rem;">
+    ← Voltar 
+  </a>
+</div>
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <h2 class="mb-4 text-center">Cadastrar Novo Produto</h2>
+
+    <form action="{{ url_for('produtos.cadastrar') }}" method="post" enctype="multipart/form-data" class="card p-4 shadow-sm">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" required required maxlength="100">
+      </div>
+
+      <div class="mb-3">
+        <label for="descricao" class="form-label">Descrição</label>
+        <textarea class="form-control" id="descricao" name="descricao" rows="3" maxlength="500"></textarea>
+      </div>
+
+      <div class="mb-3">
+  <label for="categoria" class="form-label">Categoria</label>
+  <select id="categoria" name="categoria_id" class="form-select" required>
+    <option value="" disabled selected>Selecione a categoria</option>
+    {% for cat in categorias %}
+      <option value="{{ cat.id }}">{{ cat.nome }}</option>
+    {% endfor %}
+  </select>
+</div>
+
+      <div class="mb-3">
+        <label for="preco" class="form-label">Preço</label>
+        <input type="number" class="form-control" id="preco" name="preco" step="0.01" required>
+      </div>
+
+      <div class="mb-4">
+        <label for="imagem" class="form-label">Imagem do Produto</label>
+        <input type="file" class="form-control" id="imagem" name="imagem" accept="image/*" required>
+      </div>
+
+      <div class="d-grid">
+        <button type="submit" class="btn btn-custom btn-login">Salvar Produto</button>
+      </div>
+    </form>
+
+    <!-- Mensagens flash (se houver) -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="mt-3">
+          {% for category, msg in messages %}
+            <div class="alert alert-{{ 'danger' if category == 'danger' else category }} alert-dismissible fade show" role="alert">
+              {{ msg }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+  </div>
+</div>
+{% endblock %}
+

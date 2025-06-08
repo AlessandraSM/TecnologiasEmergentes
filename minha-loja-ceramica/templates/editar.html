@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Editar Produto - Pétala de Porcelana{% endblock %}
+
+{% block content %}
+
+<!-- Link de voltar, maior e à esquerda da tela -->
+<div class="container-fluid px-4 mt-3">
+  <a href="{{ url_for('produtos.listar') }}"
+     class="btn btn-link text-decoration-none fw-semibold"
+     style="color: #7C9473; font-size: 1.1rem;">
+    ← Voltar para lista
+  </a>
+</div>
+
+<main class="container" style="max-width: 480px;">
+  <h1 class="mb-4" style="color: #7C9473;">Editar Produto</h1>
+
+  <form action="{{ url_for('produtos.editar', id=produto.id) }}" method="post" enctype="multipart/form-data" novalidate>
+    <div class="mb-3">
+      <label for="nome" class="form-label" style="color: #7C9473;">Nome:</label>
+      <input type="text" class="form-control" id="nome" name="nome" value="{{ produto.nome }}" required maxlength="100">
+    </div>
+
+    <div class="mb-3">
+      <label for="descricao" class="form-label" style="color: #7C9473;">Descrição:</label>
+      <textarea class="form-control" id="descricao" name="descricao" rows="3" maxlength="500">{{ produto.descricao }}</textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="preco" class="form-label" style="color: #7C9473;">Preço:</label>
+      <input type="number" class="form-control" step="0.01" id="preco" name="preco" value="{{ '%.2f' % produto.preco }}" required>
+    </div>
+
+    <!-- Novo campo de categoria -->
+    <div class="mb-3">
+      <label for="categoria" class="form-label" style="color: #7C9473;">Categoria:</label>
+      <select class="form-select" id="categoria" name="categoria" required>
+        {% for categoria in categorias %}
+          <option value="{{ categoria.id }}" {% if produto.categoria_id == categoria.id %}selected{% endif %}>
+            {{ categoria.nome }}
+          </option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="imagem" class="form-label" style="color: #7C9473;">Imagem:</label>
+      <input class="form-control" type="file" id="imagem" name="imagem">
+    </div>
+
+    <!-- Botão à direita -->
+    <div class="d-flex justify-content-end">
+      <button type="submit" class="btn btn-custom btn-login">Salvar</button>
+    </div>
+  </form>
+</main>
+{% endblock %}

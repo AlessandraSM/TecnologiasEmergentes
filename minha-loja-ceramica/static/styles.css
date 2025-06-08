@@ -1,0 +1,275 @@
+/* styles.css - Estilo personalizado para o e-commerce de porcelanas */
+
+/* Corpo da página */
+body {
+    background-color: #FAF7F0;
+    color: #333333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Links */
+a {
+    color: #7C9473;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #D6AD60;
+    text-decoration: underline;
+}
+
+/* Botões personalizados além do Bootstrap (se usar .btn-custom) */
+.btn-custom {
+    background-color: #A1C6EA;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #7C9473;
+    color: white;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    color: #7C9473;
+}
+
+/* Cards - pequenos ajustes sobre o Bootstrap */
+.card {
+    border-radius: 12px;
+    background-color: #ffffff;
+    /* Bootstrap já aplica sombra, pode ajustar se quiser */
+}
+
+/* Alertas Bootstrap */
+.alert {
+    border-radius: 10px;
+    font-size: 0.95rem;
+}
+
+/* Imagem do produto nos cards */
+.card-img-top {
+    object-fit: contain;
+    max-height: 180px;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Botões Editar e Excluir (caso queira usar sem Bootstrap) */
+/* Se preferir, use classes Bootstrap: btn btn-primary, btn btn-danger */
+.produto-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.produto-actions a,
+.produto-actions form button {
+    background-color: #A1C6EA;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.produto-actions a:hover,
+.produto-actions form button:hover {
+    background-color: #7C9473;
+}
+
+/* Link Cadastrar novo produto */
+.cadastrar-btn {
+    background-color: #7C9473;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.cadastrar-btn:hover {
+    background-color: #D6AD60;
+}
+
+/* Link sair */
+.logout-link {
+    color: #7C9473;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 40px;
+    transition: color 0.3s ease;
+}
+
+.logout-link:hover {
+    color: #D6AD60;
+}
+
+.btn-custom {
+    background-color: #A1C6EA;
+    color: white;
+    border: none;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #7C9473;
+    color: white;
+}
+
+.preco-produto {
+    color: #7C9473;
+}
+
+.btn-login {
+    width: auto !important;
+    height: auto !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 6px !important; /* ou o valor que quiser */
+    display: inline-block !important;
+    align-items: normal !important;
+    justify-content: normal !important;
+}
+
+.contato-compra {
+    background-color: #FAF7F0; /* fundo claro suave */
+    color: #7C9473; /* verde oliva suave */
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid #7C9473; /* para dar uma borda discreta */
+}
+
+.contato-compra a {
+    color: #7CA7E0; 
+    text-decoration: underline;
+}
+
+.contato-compra a:hover {
+    color: #4A6FA5; 
+    text-decoration: none;
+}
+
+/* Toast container fixado no canto superior direito */
+.toast-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1080;
+}
+
+/* Estilo base do toast */
+.toast {
+    border-radius: 10px;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Toasts com categorias customizadas */
+.toast-success {
+    background-color: #3182CE; /* Verde vibrante e agradável */
+    color: white;
+}
+
+.toast-danger {
+    background-color: #7C9473; /* Vermelho forte para alertas */
+    color: white;
+}
+
+.toast-info {
+    background-color: #3182CE; /* Azul claro e confiável */
+    color: white;
+}
+
+.toast-warning {
+    background-color: #7C9473; /* Laranja quente para avisos */
+    color: white;
+}
+
+.toast .btn-close {
+    filter: invert(1);
+}
+
+      main.container {
+        max-width: 480px;
+        margin: 40px auto;
+        background: #fff;
+        padding: 24px 32px;
+        border-radius: 12px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+      }
+      form label {
+        display: block;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        color: #7C9473;
+      }
+      input[type="text"],
+      input[type="number"],
+      textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-family: inherit;
+        font-size: 1rem;
+        box-sizing: border-box;
+        color: #333;
+      }
+      textarea {
+        min-height: 80px;
+      }
+      button.btn-custom {
+        margin-top: 1rem;
+        padding: 12px 20px;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        display: inline-block;
+      }
+
+      .tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 8px 18px;
+  border-radius: 12px;
+  background-color: #A1C6EA; /* azul claro */
+  color: white;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.tab:hover {
+  background-color: #7C9473; /* verde */
+}
+
+.tab.active {
+  background-color: #7C9473;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
